@@ -1170,7 +1170,9 @@ def denumbaify_tree(tree):
 
 def renumbaify_tree(tree):
 
-    hyperplanes = numba.typed.List.empty_list(sparse_hyperplane_type)
+    # hyperplanes = numba.typed.List.empty_list(sparse_hyperplane_type)
+    hyperplanes = numba.typed.List.empty_list(dense_hyperplane_type)
+
     offsets = numba.typed.List.empty_list(offset_type)
     children = numba.typed.List.empty_list(children_type)
     point_indices = numba.typed.List.empty_list(point_indices_type)
